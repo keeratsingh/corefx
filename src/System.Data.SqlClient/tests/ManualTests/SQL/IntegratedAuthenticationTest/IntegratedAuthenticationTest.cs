@@ -18,6 +18,7 @@ namespace System.Data.SqlClient.ManualTesting.Tests
         [CheckConnStrSetupFact]
         public static void IntegratedAuthenticationTestWithConnectionPooling()
         {
+            //
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(DataTestUtility.TcpConnStr);
             builder.IntegratedSecurity = true;
             builder.Pooling = true;
