@@ -22,6 +22,7 @@ namespace System.Data.SqlClient.ManualTesting.Tests
         [ConditionalFact(nameof(IsIntegratedSecurityEnvironmentSet),nameof(AreConnectionStringsSetup))]
         public static void IntegratedAuthenticationTestWithConnectionPooling()
         {
+            //
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(DataTestUtility.TcpConnStr);
             builder.IntegratedSecurity = true;
             builder.Pooling = true;
